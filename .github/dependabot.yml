@@ -1,0 +1,15 @@
+# .github/dependabot.yml
+version: 2
+updates:
+  # 1. GitHub Actions のライブラリを更新する設定
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly" # 毎週チェック
+
+  # 2. npm (JavaScript/TypeScript) のパッケージを更新する設定
+  - package-ecosystem: "npm"
+    directory: "/" # package.jsonがある場所
+    schedule:
+      interval: "daily" # 毎日チェック
+    open-pull-requests-limit: 5 # 一度に作るPRの最大数
